@@ -1,0 +1,8 @@
+# used for storing varibales
+users: # users is a variable, which contains lists, each list contains a dictionary/object with two key value pairs
+  - username: amitk
+    state: present
+  - username: johnd
+    state: absent
+  - username: superman
+    state: present

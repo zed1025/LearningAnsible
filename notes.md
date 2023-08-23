@@ -32,4 +32,15 @@
     - `ansible -i inventory.ini -u root -m package -a "name=nginx state=present" webservers`
 - Ansible Playbooks
   - https://docs.ansible.com/ansible/latest/playbook_guide/index.html
+  - Uses/benefits of playbooks
+    - playbooks act as documentation for your infrastructure and its state
+    - playbooks are Ansible's configuration, deployment, and orchestration language
+  - A Playbook is a collection of one or more _plays_. Each Play contains multiple _tasks_.
+- Ansible Roles
+  - ideally Roles should have one single purpose
+  - on a very high level, roles are collection of playbooks, files and package them so that they are repeatable and sharable
+  - They are like a function, where you could run the same role multiple times in the same playbook with different input data
+  - Roles are used for managing a large number of resources that are related
+  - see playbooks/roles-example for an example role.
+  - https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_roles.html
   - 

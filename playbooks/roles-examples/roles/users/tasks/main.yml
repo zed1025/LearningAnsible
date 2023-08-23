@@ -1,0 +1,5 @@
+- name: Manage user accounts # task
+  ansible.builtin.user:
+    name: "{{ item.username }}"
+    state: "{{ item.state }}"
+  loop: "{{ users }}"

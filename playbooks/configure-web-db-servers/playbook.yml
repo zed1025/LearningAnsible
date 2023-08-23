@@ -1,0 +1,21 @@
+- name: Configure the webservers
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Create a non-root users
+      ansible.builtin.user:
+        name: amitk
+        state: present
+    - name: install nginx
+      ansible.builtin.package:
+        name: nginx
+        state: present
+
+- name: Configure the databases
+  hosts: databases
+  become: yes
+  tasks:
+    - name: Install MySQL Server
+      ansible.builtin.package:
+        name: mysql-server
+        state: present
